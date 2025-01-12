@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+article{
+    padding: 20px;
+}
+
+#hero {
+    height: 100vh;
+    background: url('asset/cover\ jumbotoron.png') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.dhots {
+    position: absolute;
+    top: -10px;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 1;
+    animation: dhots-fall 4s infinite linear;
+}
+
+.dhots:nth-child(1) {
+    left: 5%;  
+    animation-duration: 4s;
+}
+
+.dhots:nth-child(2) {
+    right: 5%; 
+    animation-duration: 5s;
+}
+
+.dhots:nth-child(3) {
+    left: 20%;  
+    animation-duration: 6s;
+}
+
+.dhots:nth-child(4) {
+    right: 20%; 
+    animation-duration: 7s;
+}
+
+.dhots:nth-child(5) {
+    left: 40%;  
+    animation-duration: 8s;
+}
+
+.dhots:nth-child(6) {
+    right: 40%; 
+    animation-duration: 9s;
+}
+
+.dhots:nth-child(7) {
+    left: 60%;  
+    animation-duration: 10s;
+}
+
+.dhots:nth-child(8) {
+    right: 60%; 
+    animation-duration: 11s;
+}
+
+.dhots:nth-child(9) {
+    left: 80%;  
+    animation-duration: 12s;
+}
+
+
+.dhots:nth-child(10) {
+    right: 80%; 
+    animation-duration: 13s;
+}
+
+@keyframes dhots-fall {
+    0% {
+        top: -10px;     
+        opacity: 1;    
+    }
+    100% {
+        top: 100vh;    
+        opacity: 0;    
+    }
+}
+
+@keyframes blink {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.logo {
+    margin-left: 50px;
+    background-color: white;
+    color: black;
+    padding: 15px 40px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-right: 50px;
+    padding: 0;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.nav-links a:hover {
+    color: #00eeff;
+}
+
+.nav-links a.btn-contact {
+    background-color: #36C1C8;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5rem;
+    transition: .5s;
+}
+
+.nav-links a.btn-contact:hover {
+    background-color: #2C9C9C;
+    padding: 10px 25px;
+}
+
+.welcome-1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.welcome-2 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    margin: 0;
+}
+
+.btn-about {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: gray;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn-about:hover {
+    background-color: #36C1C8;
+    color: white;
+    transition: .3s;
+}
+
+#about {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+}
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.about-title{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.about-title span{
+    color: #007278;
+    font-size: 5rem;
+}
+
+.text-about p {
+    margin-top: 0; 
+    text-align: justify;
+}
+
+/* make a line under title about */
+.about-title::after{
+    content: "";
+    display: block;
+    background-color: #00eeff;
+    width: 100px;
+    height: 10px;
+    margin-top: 0px;
+    margin-left: 5px;
+    border-radius: 50px;
+}
+
+
