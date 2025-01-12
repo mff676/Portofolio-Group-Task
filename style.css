@@ -13,8 +13,12 @@ article{
 
 #hero {
     height: 100vh;
+<<<<<<< HEAD
     background: url('asset/jumbotoron.png') no-repeat center;
     background-size: cover;
+=======
+    background: url('asset/jumbotoron.png') no-repeat center center/cover;
+>>>>>>> defbf455c47d544a656ddd1028e0658f8c170f04
     color: white;
     display: flex;
     flex-direction: column;
