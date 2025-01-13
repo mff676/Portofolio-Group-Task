@@ -203,6 +203,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     gap: 10rem;
+    flex-direction: row;
+    width: 100%;
 }
 
 .left-side{
@@ -223,6 +225,7 @@ nav {
 
 .text-about p {
     margin-top: 0; 
+    font-size: small;
     text-align: justify;
 }
 
@@ -238,4 +241,65 @@ nav {
     border-radius: 50px;
 }
 
+.right-side img{
+    max-width: 500px;
+}
 
+#project{
+    background: url('asset/bgproject.png'), #1d1d1d;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 500;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    gap: 100px;
+}
+
+.project-item img{
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+h2.project-title{
+    font-size: xx-large;
+}
+
+.project-item{
+    position: relative;
+}
+.overlay-text{
+    position: absolute;
+    bottom: 0px;
+    left: 16px;
+}
+/* .project-description{
+    font-size: small;
+    position: absolute;
+    bottom: 10px;
+    left: 16px;
+} */
+
+.project-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+}
+
+.seemore-project{
+    padding: 10px 35px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+.seemore-project:hover {
+    background-color: #00eeff;
+    color: white;
+}
