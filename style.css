@@ -169,16 +169,22 @@ nav {
 }
 
 .btn-about {
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 40px;
+    padding: 15px 20px;
     background-color: white;
     color: gray;
     font-size: 1rem;
     border: none;
-    border-radius: 50px;
+    border-radius: 15px;
     cursor: pointer;
     font-weight: bold;
     transition: .3s;
+    
+}
+
+.btn-about a{
+    text-decoration: none;
+    color: black;
 }
 
 .btn-about:hover {
@@ -192,10 +198,13 @@ nav {
     font-weight: 400;
     font-style: normal;
     min-height: 100vh;
-    padding: 20px 30px;
+    padding: 0 100px 100px 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: white;
+    border-radius: 50px;
+    margin-top: -40px;
 }
 
 .container{
@@ -219,7 +228,7 @@ nav {
 }
 
 .about-title span{
-    color: #007278;
+    color: #65FAFF;
     font-size: 5rem;
 }
 
@@ -233,10 +242,11 @@ nav {
 .about-title::after{
     content: "";
     display: block;
-    background-color: #00eeff;
+    background-color: #65FAFF;
     width: 100px;
     height: 10px;
-    margin-top: 0px;
+    margin-top: -10px;
+    margin-bottom: 30px;
     margin-left: 5px;
     border-radius: 50px;
 }
@@ -266,6 +276,7 @@ nav {
 }
 
 h2.project-title{
+    margin-top: 50px;
     font-size: 3rem;
     font-family: "Poppins", serif;
 }
@@ -318,11 +329,14 @@ h2.project-title{
 }
 
 .btn-project{
-    padding: 10px 35px;
+    padding: 20px 50px;
+    margin-bottom: 70px;
     border-radius: 20px;
     border: none;
     cursor: pointer;
     transition: .3s;
+    font-size: 18px;
+    font-weight: bold;
 
 }
 
@@ -345,6 +359,7 @@ h2.project-title{
 }
 
 .contact-title{
+    padding-top: 50px;
     font-size: 3rem;
     font-family: "Poppins", serif;
 }
@@ -389,8 +404,60 @@ h2.project-title{
     border: none;       
     color: black;
     transition: .3s;
+    margin-bottom: 60px;
 }
 
 .btn-contact:hover{
     background-color: #aea1a1;
+}
+
+footer{
+    background-color: #1B1B1B;
+    height: fit-content;
+    width: auto;
+    position: relative;
+    
+}
+
+footer img{
+    position: absolute;
+    height: auto;
+    width: 500px;
+    margin-top: -200px;
+    margin-left: 800px ;
+    z-index: 1;
+    
+}
+.main-footer{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 50px;
+    align-items: center;
+}
+
+.content-foot ul li{
+    list-style: none;
+    margin: 15px 0;
+}
+
+.teamone-foot {
+    font-size: 3rem;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    margin: 0;
+}
+
+.copyright{
+    background-color: #545454;
+    padding: 15px 0;
+    z-index: 2;
+}
+
+.copyright h4{
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: 300;
 }
