@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Animation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1d1d1d;
+            color: white;
+            font-family: arial, sans-serif;
+        }
+
+        nav {
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgb(0, 0, 0);
+        }
+
+        .logo {
+            margin-left: 50px;
+            background-color: white;
+            color: black;
+            padding: 13px 40px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 50px;
+            margin-right: 10px;
+            margin-left: 0;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .2s;
+        }
+
+        .nav-links a:hover {
+            color: #00eeff;
+        }
+
+        .nav-links a.btn-contact {
+            background-color: #36C1C8;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            border-radius: 5rem;
+            transition: .5s;
+        }
+
+        .nav-links a.btn-contact:hover {
+            background-color: #2C9C9C;
+            padding: 10px 25px;
+        }
+
+        .container-fluid { 
+            background-image: url(background-asset/Topo.png);
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 60%;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            position: relative; 
+            overflow: hidden;
+        }
+
+
+
+        .container-fluid::before {
+            content: "Team One"; 
+            position: absolute;
+            top: 50%;
+            right: 8%;
+            transform: translate(50%, -50%) rotate(-90deg);
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+            font-size: 17rem; 
+            font-weight: bold;
+            color: #1d1d1d;
+            z-index: 0; 
+            pointer-events: none; 
+            text-align: center;
+            white-space: nowrap; 
+            padding-bottom: -1000px;
+        }
+
+        .profile-card {
+            background-color: white;
+            height: 300px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 35px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .profile-card:hover {
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #7B7B7B;
+            z-index: 1;
+            transition: transform 0.5s ease;
+        }
+
+        .profile-card:hover .card-background {
+            transform: translateX(-60px);
+        }
+
+        .profile-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+
+        .text-content {
+            color: white;
+        }
+
+        .text-content h5 {
+            margin: 0;
+        }
+
+        .experience-list {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: white;
+        }
+
+        .experience-list li {
+            margin-bottom: 5px;
+        }
+
+        .social-icons {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 3;
+            transition: opacity 0.5s ease;
+        }
+
+        .profile-card:hover .social-icons {
+            opacity: 1;
+        }
+
+        .social-icons a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .row{
+            margin-top: 60px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Logo</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profil.html">Profile</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="#" class="btn-contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3">
+                    <div class="card text-center" style="width: 200px; background-color: #7B7B7B; border-radius: 35px;">
+                        <img src="asset/image.png" class="card-img-top" alt="..." style="border-radius: 35px; width: 200px; height: 165px;">
+                        <div class="card-body">
+                        <h5 class="card-title" style="color: white;">Bagas</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="profile-card">
+                        <div class="card-background"></div>
+                        <div class="profile-content">
+                            <div class="text-content">
+                                <h3>Fullstack Developer</h3>
+                                <br>
+                                <h5>Experience</h5>
+                                <ul class="experience-list">
+                                    <li>1. Lorem ipsum</li>
+                                    <li>2. Lorem ipsum</li>
+                                    <li>3. Lorem ipsum</li>
+                                    <li>4. Lorem ipsum</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#"><i class="bi bi-github"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3">
+                    <div class="card text-center" style="width: 200px; background-color: #7B7B7B; border-radius: 35px;">
+                        <img src="asset/image.png" class="card-img-top" alt="..." style="border-radius: 35px; width: 200px; height: 165px;">
+                        <div class="card-body">
+                        <h5 class="card-title" style="color: white;">Bagas</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="profile-card">
+                        <div class="card-background"></div>
+                        <div class="profile-content">
+                            <div class="text-content">
+                                <h3>Fullstack Developer</h3>
+                                <br>
+                                <h5>Experience</h5>
+                                <ul class="experience-list">
+                                    <li>1. Lorem ipsum</li>
+                                    <li>2. Lorem ipsum</li>
+                                    <li>3. Lorem ipsum</li>
+                                    <li>4. Lorem ipsum</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#"><i class="bi bi-github"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3">
+                    <div class="card text-center" style="width: 200px; background-color: #7B7B7B; border-radius: 35px;">
+                        <img src="asset/image.png" class="card-img-top" alt="..." style="border-radius: 35px; width: 200px; height: 165px;">
+                        <div class="card-body">
+                        <h5 class="card-title" style="color: white;">Bagas</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="profile-card">
+                        <div class="card-background"></div>
+                        <div class="profile-content">
+                            <div class="text-content">
+                                <h3>Fullstack Developer</h3>
+                                <br>
+                                <h5>Experience</h5>
+                                <ul class="experience-list">
+                                    <li>1. Lorem ipsum</li>
+                                    <li>2. Lorem ipsum</li>
+                                    <li>3. Lorem ipsum</li>
+                                    <li>4. Lorem ipsum</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#"><i class="bi bi-github"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3">
+                    <div class="card text-center" style="width: 200px; background-color: #7B7B7B; border-radius: 35px;">
+                        <img src="asset/image.png" class="card-img-top" alt="..." style="border-radius: 35px; width: 200px; height: 165px;">
+                        <div class="card-body">
+                        <h5 class="card-title" style="color: white;">Bagas</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="profile-card">
+                        <div class="card-background"></div>
+                        <div class="profile-content">
+                            <div class="text-content">
+                                <h3>Fullstack Developer</h3>
+                                <br>
+                                <h5>Experience</h5>
+                                <ul class="experience-list">
+                                    <li>1. Lorem ipsum</li>
+                                    <li>2. Lorem ipsum</li>
+                                    <li>3. Lorem ipsum</li>
+                                    <li>4. Lorem ipsum</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#"><i class="bi bi-github"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Bootstrap JS and Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+
+</html>
