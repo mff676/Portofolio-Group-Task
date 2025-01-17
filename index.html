@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Header section -->
     <header>
         <nav>
-            <div class="logo">Logo</div>
+            <div class="logo">
+               <a href="#" style="text-decoration: none;"><h1 style="color: white;">Team<span style="color: #65FAFF;">One.</span></h1></a> 
+            </div>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="profil.html">Profile</a></li>
@@ -50,22 +51,21 @@
                 <div class="left-side">
                     <div class="text-about">
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, voluptates culpa. Fuga saepe
-                            eum ad fugit sint, voluptates possimus enim cupiditate accusantium placeat incidunt minima
-                            harum unde! Quas voluptatibus fuga, ratione quam recusandae illum eos sunt distinctio?
-                            Facilis minus, veritatis error deleniti dolor perspiciatis ipsum voluptates unde obcaecati
-                            totam alias, qui maiores, fugit officiis debitis nostrum reiciendis dignissimos ratione.
-                            Autem dolore aliquid commodi atque est tenetur ipsum sed nulla, itaque culpa, repudiandae
-                            quos facilis iste distinctio maxime consectetur id ad quam nesciunt nostrum molestiae fuga
-                            hic! Pariatur, sapiente! Odio laboriosam quasi officiis beatae culpa eius consectetur odit
-                            est mollitia magni.
+                            This is us, Team One! Salah satu kelompok dalam mata kuliah Pemrograman Web 1. Kelompok 
+                            ini terdiri dari 4 mahasiswa yang beranggotakan Aido Nayaka (10124382) sebagai ketua 
+                            kelompok, serta Bagas Nurdiyansah (10124361), Muhammad Fathul Falah (10124392), dan 
+                            Vahid Bintang Hasyeemian (10124382) sebagai anggota kelompok. Dengan kemampuan dan latar belakang masing - masing anggota 
+                            kelompok yang berbeda, kami melakukan kolaborasi dalam bidang desain, pengembangan web, 
+                            serta multimedia untuk menghasilkan satu proyek berupa website portofolio ini. Proyek ini tidak 
+                            kami jadikan sebagai sekedar sarana pembelajaran, tetapi juga sebagai pengalaman dalam 
+                            bekerja sama untuk menciptakan sesuatu atas tujuan serta kepentingan bersama. 
                         </p>
                     </div>
                 </div>
                 <!-- end left side -->
                 <!-- right side -->
                 <div class="right-side">
-                    <img src="asset/our.png" alt="image" class="img-about">
+                    <video class="img-about" src="asset/profile.mp4" autoplay loop></video>
                 </div>
                 <!-- end right side -->
             </div>
@@ -77,8 +77,20 @@
             <h2 class="project-title">Our Projects</h2>
             <div class="container">
                 <div class="project-grid">
-                    <div class="project-item">
-                        <img src="asset/example.jpg" alt="image" class="project-image">
+                    <a href="https://github.com/mff676/club-voli" target="_blank" class="project-item">
+                        <img src="asset/project1.jpg" alt="image" class="project-image">
+                        <div class="overlay-text">
+                            <h3 class="project-name">Website Club Volly</h3>
+                            <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                                sit
+                                amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis nato quia nostra
+                                putamus,
+                                sicut temporibus autem quibusdam et aut officiis debitis
+                            </p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/mff676/Aici-Web/tree/main" target="_blank" class="project-item">
+                        <img src="asset/project2.jpg" alt="image" class="project-image">
                         <div class="overlay-text">
                             <h3 class="project-name">Project 1</h3>
                             <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
@@ -88,11 +100,11 @@
                                 sicut temporibus autem quibusdam et aut officiis debitis
                             </p>
                         </div>
-                    </div>
-                    <div class="project-item">
-                        <img src="asset/example.jpg" alt="image" class="project-image">
+                    </a>
+                    <a href="ayahhadis.com" target="_blank" class="project-item">
+                        <img src="asset/project3.png" alt="image" class="project-image">
                         <div class="overlay-text">
-                            <h3 class="project-name">Project 1</h3>
+                            <h3 class="project-name">Website Ayah Hadis</h3>
                             <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                                 sit
                                 amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis nato quia nostra
@@ -100,19 +112,7 @@
                                 sicut temporibus autem quibusdam et aut officiis debitis
                             </p>
                         </div>
-                    </div>
-                    <div class="project-item">
-                        <img src="asset/example.jpg" alt="image" class="project-image">
-                        <div class="overlay-text">
-                            <h3 class="project-name">Project 1</h3>
-                            <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                sit
-                                amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis nato quia nostra
-                                putamus,
-                                sicut temporibus autem quibusdam et aut officiis debitis
-                            </p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <button class="btn-project">See More</button>

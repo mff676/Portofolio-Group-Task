@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -101,24 +105,25 @@ article{
     100% { opacity: 0.8; }
 }
 nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
-    padding: 20px;
+    padding: 5px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
+    position: fixed;
 
 }
 
-.logo {
+/* .logo {
     margin-left: 50px;
     background-color: white;
     color: black;
     padding: 15px 40px;
     font-weight: bold;
-}
+} */
 
 .nav-links {
     list-style: none;
@@ -185,10 +190,17 @@ nav {
 .btn-about a{
     text-decoration: none;
     color: black;
+    transition: .3s;
+
 }
 
 .btn-about:hover {
     background-color: #36C1C8;
+    color: white;
+    transition: .3s;
+}
+
+.btn-about:hover a{
     color: white;
     transition: .3s;
 }
@@ -198,13 +210,12 @@ nav {
     font-weight: 400;
     font-style: normal;
     min-height: 100vh;
-    padding: 0 100px 100px 100px;
+    padding:  70px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: white;
     border-radius: 50px;
-    margin-top: -40px;
 }
 
 .container{
@@ -243,7 +254,7 @@ nav {
     content: "";
     display: block;
     background-color: #65FAFF;
-    width: 100px;
+    width: 70px;
     height: 10px;
     margin-top: -10px;
     margin-bottom: 30px;
@@ -251,8 +262,9 @@ nav {
     border-radius: 50px;
 }
 
-.right-side img{
+.right-side video{
     max-width: 500px;
+    border-radius: 20px;
 }
 
 #project{
@@ -271,7 +283,10 @@ nav {
 }
 
 .project-item img{
+    min-width: 390px;
     max-width: 400px;
+    min-height: 250px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -281,16 +296,11 @@ h2.project-title{
     font-family: "Poppins", serif;
 }
 
-
-.project-name{
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
 .project-name{
     font-size: 1.5rem;
     margin-bottom: 5px;
     font-weight: 700;
+    margin-top: 0;
 }
 
 .project-description{
@@ -302,16 +312,47 @@ h2.project-title{
 
 .project-item{
     position: relative;
+    filter: brightness(.9);
+    transition: .4s all;
+    color: white;
 }
 
-.overlay-text{
+
+
+
+.overlay-text {
+    width: fit-content;
+    height: 20%;
     position: absolute;
     bottom: 0px;
-    /* left: 16px; */
-    /* z-index: -10;
-    background: #00000066; */
-    padding-left: 16px;
-    height: fit-content;
+    background: rgb(0, 0, 0, 0.5);
+    padding: 0px 25px 100px;
+    transform: translateY(25px);
+    transition: transform 0.6s;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay-text > *{
+    transform: translateY(25px);
+    transition: transform 0.5s;
+    }
+    /* 
+
+    .project-item:hover .overlay-text > *{
+        transform: translateY(25px);
+        } */
+        
+        .project-item:hover {
+            transition: .5s all;
+            filter: brightness(.7);
+            cursor: pointer;
+        }
+        
+.project-item:hover .overlay-text {
+    opacity: 1;
+    transform: translateY(0px);
+
 }
 
 /* group hover project item hover the overlay is appear
@@ -414,6 +455,7 @@ h2.project-title{
 footer{
     background-color: #1B1B1B;
     height: fit-content;
+    overflow: hidden;
     width: auto;
     position: relative;
     
