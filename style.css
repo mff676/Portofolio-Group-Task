@@ -378,11 +378,12 @@ h2.project-title{
     transition: .3s;
     font-size: 18px;
     font-weight: bold;
-
+    background-color: #00eeff;
+    color: white;
 }
 
 .btn-project:hover {
-    background-color: #00eeff;
+    background-color: #06acb8;
     color: white;
 }
 
