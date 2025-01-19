@@ -18,31 +18,24 @@
             top: 0;
             width: 100%;
             padding: 20px;
+            height: 77px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: rgb(0, 0, 0);
         }
 
-        .logo {
-            margin-left: 50px;
-            background-color: white;
-            color: black;
-            padding: 13px 40px;
-            font-weight: bold;
-        }
-
         .nav-links {
             list-style: none;
             display: flex;
             gap: 50px;
-            margin-right: 10px;
+            margin-right: 5px;
             margin-left: 0;
             margin-bottom: 0;
             margin-top: 0;
             padding: 0;
             font-weight: bold;
-        }
+        }   
 
         .nav-links a {
             color: white;
@@ -189,13 +182,29 @@
             margin-top: 60px;
             z-index: 1;
         }
+
+        nav .logo{
+            margin-left: 5px;
+        }
+
+        .custom-logo h1 {
+            font-size: 1.5rem; /* atau ukuran yang Anda inginkan */
+            font-weight: bold; /* atau gaya lainnya */
+            color: white; /* tetap menjaga gaya Anda */
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="logo">Logo</div>
+            <div class="logo custom-logo">
+                <a href="#" style="text-decoration: none;">
+                    <h1 style="color: white;">Team<span style="color: #65FAFF;">One.</span></h1>
+                </a> 
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="profil.html">Profile</a></li>
